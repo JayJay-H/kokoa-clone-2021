@@ -1,64 +1,61 @@
 .welcome-header {
-    margin: 90px 0px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .welcome-header__title {
-    margin-bottom: 40px;
-    font-size: 25px;
-  }
-  
-  .welcome_header__text {
-    width: 60%;
-    opacity: 0.7;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 30px;
-  }
-  
-  .login-form__input, .login-form__btn {
-    border: none;
-    padding: 15px 0px;
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-  
-  .login-form__input {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .login-form__input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .login-form__input:focus {
-    border-color: var(--yellow);
-  }
-  
-  .login-form__btn {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 20px 0px;
-    transition: background-color 0.1s ease-in-out;
-  }
-  
-  .login-form__btn:hover {
-    background-color: var(--yellow);
-  }
-  
-  .login-form__a {
-    text-align: center;
-    /* Erase bottom decoration of anchor */
-    text-decoration: none;
-    /* Take color from parent(black) */
-    color: inherit;
-    font-size: 13px;
-  }
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.welcome_header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+.login-form__input,
+.login-form__btn {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.login-form__input {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.login-form__input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.login-form__input:focus {
+  border-color: var(--yellow);
+}
+
+.login-form__btn {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 20px 0px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.login-form__btn:hover {
+  background-color: var(--yellow);
+}
+
+.login-form__a {
+  text-align: center;
+  font-size: 13px;
+}

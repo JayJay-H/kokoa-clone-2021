@@ -126,3 +126,10 @@ table {
 input:focus {
   outline: none;
 }
+
+a {
+  /* Erase bottom decoration of anchor */
+  text-decoration: none;
+  /* Take color from parent(black) */
+  color: inherit;
+}
