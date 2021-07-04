@@ -35,8 +35,12 @@ body {
   border: none;
   padding: 15px 0px;
   font-size: 18px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
+}
+
+/* Except input type submit bottom border change color gray to yello */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   transition: border-color 0.3s ease-in-out;
 }
 
@@ -46,4 +50,25 @@ body {
 
 #login-form input:focus {
   border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 20px 0px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: var(--yellow);
+}
+
+#login-form a {
+  text-align: center;
+  /* Erase bottom decoration of anchor */
+  text-decoration: none;
+  /* Take color from parent(black) */
+  color: inherit;
+  font-size: 13px;
 }
