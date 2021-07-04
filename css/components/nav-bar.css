@@ -23,4 +23,32 @@
 
 .nav__link {
   color: #2e363e;
+  /* For the position of nav__notification's anchor */
+  position: relative;
+}
+
+.nav__notification {
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 19px;
+  bottom: 13px;
+}
+
+.nav__notificationdot {
+  background-color: tomato;
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  right: -8px;
+  bottom: 28px;
 }
