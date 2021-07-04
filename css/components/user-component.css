@@ -1,3 +1,7 @@
+.user-component {
+  justify-content: space-between;
+}
+
 .user-component,
 .user-component__column:first-child {
   display: flex;
@@ -25,4 +29,52 @@
 .user-component__avatar--xl {
   width: 80px;
   height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__channel-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  background-color: var(--yellow);
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.user-component__channel-avatar__face {
+  width: 38px;
+  height: 35px;
+  background-color: black;
+  color: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.user-component__channel-avatar__leg {
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  bottom: 10px;
+  left: 19px;
+  transform: skewX(-30deg) rotate(-30deg);
 }
