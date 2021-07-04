@@ -2,6 +2,14 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  /*
+    Let's say there is a box and I gave the box width 200px.
+    If I gave the box padding left 10px and box's total width is 210px.
+    Because css want to keep only box's 'content' width 200px not padding+content's width of box.
+    So If I want box's total width 200px, tell css to keep box's total width 200px.
+    That is box-sizing: boder-box;.
+    Default of box-sizing is content-box.
+  */
   box-sizing: border-box;
   background-color: #f9f9fa;
   padding: 20px 50px;
