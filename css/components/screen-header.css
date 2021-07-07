@@ -10,8 +10,26 @@
 .screen-header__title {
   font-size: 32px;
   font-weight: 600;
+  width: 50%;
+}
+
+.screen-header__icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
 }
 
 .screen-header__icons span {
   margin-left: 25px;
+}
+
+.screen-header__dot-cog {
+  display: flex;
+  position: relative;
+}
+
+.screen-header__dot {
+  position: absolute;
+  right: -8px;
+  bottom: 18px;
 }
