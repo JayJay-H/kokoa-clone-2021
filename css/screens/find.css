@@ -112,6 +112,7 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
+  /* Absolute looses the sizing if I don't specify 'width' and 'height' */
   position: absolute;
   bottom: 9px;
   right: 7px;
