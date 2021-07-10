@@ -18,6 +18,10 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.open-chat {
+  height: 60vh;
+}
+
 .open-chat__header {
   display: flex;
   justify-content: space-between;
@@ -34,6 +38,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 .open-post__title {
