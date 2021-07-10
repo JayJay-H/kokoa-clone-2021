@@ -1,3 +1,31 @@
 .chat-screen {
+  height: 10000vh;
   background-color: #abc1d1;
+}
+
+.chat-screen .status-bar,
+.chat-screen .alt-header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;
+}
+
+.chat-screen .status-bar {
+  /* 
+    z-index attribute set z axis order of descendants items
+    Let's say a-div and b-div is covering each other.
+    If a-div's z-index is larger, a-div cover b-div. 
+    Only absolute position or fixed position can set z-index.
+    */
+  z-index: 2;
+}
+
+.chat-screen .alt-header {
+  z-index: 1;
+}
+
+.main-chat {
+  margin-top: 150px;
 }
