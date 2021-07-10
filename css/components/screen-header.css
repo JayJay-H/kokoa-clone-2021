@@ -31,3 +31,16 @@
   right: -8px;
   bottom: 18px;
 }
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header .screen-header__dot-cog:hover span:first-child {
+  animation: rotateCog 1s linear infinite;
+}
