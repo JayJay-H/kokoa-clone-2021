@@ -2,10 +2,15 @@ const replyForm = document.querySelector(".reply");
 const replyInput = document.querySelector(".reply__column input");
 const mainChat = document.querySelector(".main-chat");
 
-function sendChat(event) {
-  event.preventDefault();
-  const msg = replyInput.value;
-  replyInput.value = "";
+const sendedChats = [];
+
+const SENDED_CHATS_KEY = "sendedChat";
+
+function saveSendedChats() {
+  localStorage.setItem(SENDED_CHATS_KEY, JSON.stringify(sendedChats));
+}
+
+function paintChats(newChat) {
   const messageRow = document.createElement("div");
   messageRow.classList.add("message-row", "message-row--own");
 
@@ -17,7 +22,7 @@ function sendChat(event) {
 
   const messageBubble = document.createElement("span");
   messageBubble.classList.add("message__bubble");
-  messageBubble.innerText = msg;
+  messageBubble.innerText = newChat;
 
   const messageTime = document.createElement("span");
   messageTime.classList.add("message__time");
@@ -31,6 +36,21 @@ function sendChat(event) {
   messageRow.appendChild(messageRowContent);
 
   mainChat.appendChild(messageRow);
+  sendedChats.push(newChat);
+  saveSendedChats();
+}
+
+function sendChat(event) {
+  event.preventDefault();
+  const msg = replyInput.value;
+  replyInput.value = "";
+  paintChats(msg);
 }
 
 replyForm.addEventListener("submit", sendChat);
+
+const savedSendedChats = localStorage.getItem(SENDED_CHATS_KEY);
+if (savedSendedChats) {
+  const parsedSendedChats = JSON.parse(savedSendedChats);
+  parsedSendedChats.forEach(paintChats);
+}
