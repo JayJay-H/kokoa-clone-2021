@@ -5,12 +5,12 @@ const userCompnentSubtitle = document.querySelector(
 
 const SENDED_CHATS_KEY = "sendedChat";
 const savedSendedChats = localStorage.getItem(SENDED_CHATS_KEY);
-
-if (savedSendedChats) {
+if (savedSendedChats && userCompnentSubtitle.innerText[0] !== "+") {
   badges.forEach((item) => {
     item.classList.add("hidden");
   });
   const parsedsavedSendedChats = JSON.parse(savedSendedChats);
+
   userCompnentSubtitle.innerText =
     parsedsavedSendedChats[parsedsavedSendedChats.length - 1];
 }
