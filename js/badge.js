@@ -5,14 +5,16 @@ const userCompnentSubtitle = document.querySelector(
 
 const SENDED_CHATS_KEY = "sendedChat";
 const savedSendedChats = localStorage.getItem(SENDED_CHATS_KEY);
-if (savedSendedChats && userCompnentSubtitle.innerText[0] !== "+") {
+if (savedSendedChats) {
   badges.forEach((item) => {
     item.classList.add("hidden");
   });
   const parsedsavedSendedChats = JSON.parse(savedSendedChats);
 
-  userCompnentSubtitle.innerText =
-    parsedsavedSendedChats[parsedsavedSendedChats.length - 1];
+  if (userCompnentSubtitle.innerText[0] !== "+") {
+    userCompnentSubtitle.innerText =
+      parsedsavedSendedChats[parsedsavedSendedChats.length - 1];
+  }
 }
 
 const JHTimeStamp = document.querySelector(".user-component__time");
